@@ -1,0 +1,52 @@
+body{
+    margin: auto;
+    padding: auto;
+}
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1280px;
+
+}
+.user{
+    margin: 4%;
+    width: 15%;
+    height: 40%;
+    border: 1px solid black;
+}
+h3{
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+}
+.job{
+    text-align: center;
+}
+
+.picture{
+    border-radius: 100%;
+    border: 1px solid black;
+}
+.main{
+    margin: auto;
+    width: 400px;
+    height: 200px;
+}
+.sub_info{
+    margin-top: 4%;
+}
+.main_info{
+    display: flex;
+}
+.education{
+    display: flex;
+}
+.education_title{
+    margin-right: 3%;
+}
+.skills{
+    display: flex;
+}
+ul{
+    list-style: none;
+}

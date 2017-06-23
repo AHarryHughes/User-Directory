@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>User Directory</title>
+    <link rel='stylesheet' href="./assets/styles/site.css"/>
+</head>
+<body>
+    <h1>User Directory</h1>
+    <div class="users">
+        {{#list.users}}
+            <div class="user">
+                <div class="user_pic">
+                    <img src={{avatar}}/>
+                </div class='text'>
+                <h3 class="name"><a href={{id}}>{{name}}</a></h3>
+                {{#job}}
+                    <p class="job">{{job}}, {{company}}</p>
+                {{/job}}
+                {{^job}}
+                    <p class="job" style="color:red;">Available for hire</p>
+                {{/job}}
+            </div>
+        {{/list.users}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>User Data</title>
+    <link rel='stylesheet' href="./assets/styles/site.css"/>
+</head>
+<body>
+    <div class="main">
+        <div class='main_info'>
+            <div class="picture">
+                <img src={{avatar}}/>
+            </div>
+            <div class="info">
+                <h1>{{name}}</h1>
+                <div class="locationAndJob">
+                    {{#address.city}}
+                        <span>{{address.city}}, {{address.country}} | </span>
+                    {{/address.city}}
+                    {{^address.city}}
+                        <span>{{address.country}} | </span>
+                    {{/address.city}}
+                    {{#job}}
+                        <span>{{job}}, {{company}} </span>
+                    {{/job}}
+                    {{^job}}
+                        <span style="color:red;">Available for hire </span>
+                    {{/job}}
+                </div>
+                <div><p>{{email}} | {{phone}}</p></div>
+            </div>
+        </div>
+        <div class='sub_info'>
+            <div class='education'>
+                <div class='education_title'><strong>Education</strong></div>    
+                <div class='user_education'>
+                    <span>{{university}}</span>
+                </div>
+            </div>
+            <div class='skills'>
+                <div class='skills_title'><strong>Skills</strong></div>
+                <div class="user_skills">
+                    <ul>
+                        {{#skills}}
+                            <li>{{.}}</li>
+                        {{/skills}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
