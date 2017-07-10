@@ -7,41 +7,41 @@
     <div class="main">
         <div class='main_info'>
             <div class="picture">
-                <img src={{avatar}}/>
+                <img src={{robot.avatar}}/>
             </div>
             <div class="info">
-                <h1>{{name}}</h1>
+                <h1>{{robot.name}}</h1>
                 <div class="locationAndJob">
-                    {{#address.city}}
-                        <span>{{address.city}}, {{address.country}} | </span>
-                    {{/address.city}}
-                    {{^address.city}}
-                        <span>{{address.country}} | </span>
-                    {{/address.city}}
-                    {{#job}}
-                        <span>{{job}}, {{company}} </span>
-                    {{/job}}
-                    {{^job}}
+                    {{#robot.address.city}}
+                        <span>{{robot.address.city}}, {{robot.address.country}} | </span>
+                    {{/robot.address.city}}
+                    {{^robot.address.city}}
+                        <span>{{robot.address.country}} | </span>
+                    {{/robot.address.city}}
+                    {{#robot.job}}
+                        <span>{{robot.job}}, {{robot.company}} </span>
+                    {{/robot.job}}
+                    {{^robot.job}}
                         <span style="color:red;">Available for hire </span>
-                    {{/job}}
+                    {{/robot.job}}
                 </div>
-                <div><p>{{email}} | {{phone}}</p></div>
+                <div><p>{{robot.email}} | {{robot.phone}}</p></div>
             </div>
         </div>
         <div class='sub_info'>
             <div class='education'>
                 <div class='education_title'><strong>Education</strong></div>    
                 <div class='user_education'>
-                    <span>{{university}}</span>
+                    <span>{{robot.university}}</span>
                 </div>
             </div>
             <div class='skills'>
                 <div class='skills_title'><strong>Skills</strong></div>
                 <div class="user_skills">
                     <ul>
-                        {{#skills}}
+                        {{#robot.skills}}
                             <li>{{.}}</li>
-                        {{/skills}}
+                        {{/robot.skills}}
                     </ul>
                 </div>
             </div>

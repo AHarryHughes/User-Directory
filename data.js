@@ -1,5 +1,4 @@
-module.exports = {
-    users: [{
+[{
             "id": 1,
             "username": "hjuza0",
             "name": "Hamlen Juza",
@@ -998,6 +997,4 @@ module.exports = {
                 "postal_code": "08650",
                 "country": "United States"
             }
-        }
-    ]
-};
+        }]
