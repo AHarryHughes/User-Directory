@@ -5,13 +5,21 @@
 </head>
 <body>
     <h1>User Directory</h1>
+    <form action="/employeeSelect" method="get">
+    <select name="employeeType">
+        <option value="All" selected>All Employees</option>
+        <option value="Employed">Employed</option>
+        <option value="Unemployed">Unemployed</option>
+    </select>
+    <button>Submit</button>
+    </form>
     <div class="users">
         {{#daRobots}}
             <div class="user">
                 <div class="user_pic">
                     <img src={{avatar}}/>
                 </div class='text'>
-                <h3 class="name"><a href={{id}}>{{name}}</a></h3>
+                <h3 class="name"><a href=/userdata/{{id}}>{{name}}</a></h3>
                 {{#job}}
                     <p class="job">{{job}}, {{company}}</p>
                 {{/job}}
